@@ -1,3 +1,4 @@
+// filepath: c:\iomatedev\iomate.web\src\plugins\vuetify.ts
 /**
  * plugins/vuetify.ts
  *
@@ -15,5 +16,13 @@ import { createVuetify } from 'vuetify'
 export default createVuetify({
   theme: {
     defaultTheme: 'system',
+  },
+  components: {
+    VAppBar: {
+      elevation: 2,
+    },
+    VMenu: {
+      closeOnContentClick: false,
+    },
   },
 })

@@ -1,3 +1,4 @@
+// filepath: c:\iomatedev\iomate.web\src\router\index.ts
 /**
  * router/index.ts
  *
@@ -10,7 +11,14 @@ import { routes } from 'vue-router/auto-routes'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
+  routes: [
+    ...routes,
+    {
+      path: '/users',
+      name: 'Users',
+      component: () => import('@/pages/Users.vue'),
+    },
+  ],
 })
 
 // Workaround for https://github.com/vitejs/vite/issues/11804

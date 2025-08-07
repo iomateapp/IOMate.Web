@@ -1,35 +1,25 @@
 # Components
 
-Vue template files in this folder are automatically imported.
+This directory contains Vue components that are used throughout the application. Each component is automatically imported and registered as a global component, allowing for easy usage across different parts of the app.
 
-## 🚀 Usage
+## Available Components
 
-Importing is handled by [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components). This plugin automatically imports `.vue` files created in the `src/components` directory, and registers them as global components. This means that you can use any component in your application without having to manually import it.
+- **NavigationDrawer**: A sidebar navigation component that includes user information and navigational links.
+- **TopBar**: A top navigation bar that includes an icon on the right with a dropdown menu for user actions, such as logging out.
 
-The following example assumes a component located at `src/components/MyComponent.vue`:
+## Usage
 
-```vue
-<template>
-  <div>
-    <MyComponent />
-  </div>
-</template>
-
-<script lang="ts" setup>
-  //
-</script>
-```
-
-When your template is rendered, the component's import will automatically be inlined, which renders to this:
+To use these components, simply include them in your Vue templates. For example:
 
 ```vue
 <template>
   <div>
-    <MyComponent />
+    <NavigationDrawer />
+    <TopBar />
   </div>
 </template>
-
-<script lang="ts" setup>
-  import MyComponent from '@/components/MyComponent.vue'
-</script>
 ```
+
+## Adding New Components
+
+To add a new component, create a new `.vue` file in this directory. The component will be automatically imported and available for use in your application.

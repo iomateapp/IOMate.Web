@@ -1,3 +1,4 @@
+// filepath: c:\iomatedev\iomate.web\src\plugins\index.ts
 /**
  * plugins/index.ts
  *
@@ -11,8 +12,16 @@ import router from '../router'
 // Types
 import type { App } from 'vue'
 
-export function registerPlugins (app: App) {
+// Registering global components
+import TopBar from '@/components/TopBar.vue'
+import Users from '@/pages/Users.vue'
+import NavigationDrawer from '@/components/NavigationDrawer.vue'
+
+export function registerPlugins(app: App) {
   app
     .use(vuetify)
     .use(router)
+    .component('TopBar', TopBar)
+    .component('Users', Users)
+    .component('NavigationDrawer', NavigationDrawer)
 }

@@ -1,30 +1,21 @@
 <template>
-  <v-app>
-    <v-layout>
+  <v-layout>
+    <NavigationDrawer />
 
-      <!-- Navigation Drawer -->
-      <NavigationDrawer />
-
-      <!-- App Content -->
-      <v-main>
-        <v-container fluid>
-          <v-card>
-            <v-card-title>Conteúdo principal</v-card-title>
-            <v-card-text>
-              O conteúdo se ajusta automaticamente ao tamanho do drawer.
-            </v-card-text>
-          </v-card>
-        </v-container>
-      </v-main>
-
-    </v-layout>
-  </v-app>
+    <v-main>
+      <TopBar />
+      <v-container fluid class="pa-6">
+        <router-view />
+      </v-container>
+    </v-main>
+  </v-layout>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const drawer = ref(true)
-const rail = ref(true)
 </script>
-       
+
+<style scoped>
+.v-main {
+  min-height: 100vh;
+}
+</style>
