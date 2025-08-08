@@ -6,8 +6,8 @@
     <v-list>
       <v-list-item
         :prepend-avatar="logo"
-        subtitle="open source"
-        title="IOMate"
+        :subtitle="$t('app.subtitle')"
+        :title="$t('app.title')"
       ></v-list-item>
     </v-list>
 

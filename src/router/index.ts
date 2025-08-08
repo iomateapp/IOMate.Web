@@ -7,8 +7,8 @@
 
 // Composables
 import Layout from '@/pages/Layout.vue'
-import Tenant from '@/pages/Layout/Tenant.vue'
-import Users from '@/pages/Layout/Users.vue'
+import Tenant from '@/pages/Tenant/Tenant.vue'
+import Users from '@/pages/Tenant/Users.vue'
 import { createRouter, createWebHistory } from 'vue-router/auto'
 
 const routes = [
