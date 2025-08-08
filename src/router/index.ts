@@ -6,18 +6,26 @@
  */
 
 // Composables
+import Layout from '@/pages/Layout.vue'
+import Tenant from '@/pages/Layout/Tenant.vue'
+import Users from '@/pages/Layout/Users.vue'
 import { createRouter, createWebHistory } from 'vue-router/auto'
-import { routes } from 'vue-router/auto-routes'
+
+const routes = [
+  {
+    path: '/',
+    component: Layout,
+    children: [
+      { path: 'tenant', name: 'Tenant', component: Tenant },
+      { path: 'users', name: 'Users', component: Users },
+    ],
+  },
+]
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    ...routes,
-    {
-      path: '/users',
-      name: 'Users',
-      component: () => import('@/pages/Users.vue'),
-    },
+    ...routes
   ],
 })
 

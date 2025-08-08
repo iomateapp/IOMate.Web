@@ -14,7 +14,7 @@ import type { App } from 'vue'
 
 // Registering global components
 import TopBar from '@/components/TopBar.vue'
-import Users from '@/pages/Users.vue'
+import Users from '@/pages/Layout/Users.vue'
 import NavigationDrawer from '@/components/NavigationDrawer.vue'
 
 export function registerPlugins(app: App) {

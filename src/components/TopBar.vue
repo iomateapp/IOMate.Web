@@ -4,8 +4,8 @@
     <v-menu offset-y>
       <template #activator="{ props }">
         <v-btn icon v-bind="props">
-          <v-avatar size="large" color="error">
-            <span class="text-h5">{{ user.initials }}</span>
+          <v-avatar color="error" size="small">
+            <span class="text-h7">{{ user.initials }}</span>
           </v-avatar>
         </v-btn>
       </template>
