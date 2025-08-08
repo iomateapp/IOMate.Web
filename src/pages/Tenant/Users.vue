@@ -2,7 +2,20 @@
   <v-card>
     <v-card-title>Usuários</v-card-title>
     <v-card-text>
-      Aqui você pode gerenciar os usuários do sistema.
+      <v-table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="user in users" :key="user.id">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+          </tr>
+        </tbody>
+      </v-table>
     </v-card-text>
   </v-card>
 </template>

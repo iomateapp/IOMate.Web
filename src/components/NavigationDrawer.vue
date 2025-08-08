@@ -15,7 +15,7 @@
 
     <v-list density="compact" nav>
       <v-list-item prepend-icon="mdi-home" title="Home" value="home"></v-list-item>
-      <v-list-item prepend-icon="mdi-domain" title="Tenant" value="tenant" to="/Tenant"></v-list-item>
+      <v-list-item prepend-icon="mdi-domain" title="Tenant" value="tenant" to="/tenant"></v-list-item>
     </v-list>
   </v-navigation-drawer>
 </template>
