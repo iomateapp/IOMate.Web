@@ -6,7 +6,7 @@
  */
 
 // Composables
-import Layout from '@/pages/Layout.vue'
+import Layout from '@/layouts/Layout.vue'
 import Tenant from '@/pages/Tenant/Tenant.vue'
 import Users from '@/pages/Tenant/Users.vue'
 import { createRouter, createWebHistory } from 'vue-router/auto'
